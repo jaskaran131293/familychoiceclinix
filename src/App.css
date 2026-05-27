@@ -1,0 +1,214 @@
+/* Custom Cursor Trail */
+.cursor-circle {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background: linear-gradient(135deg, #27B4C8 0%, #1e96a8 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    box-shadow: 0 0 15px rgba(39, 180, 200, 0.8), 0 0 30px rgba(39, 180, 200, 0.4);
+    will-change: transform, opacity;
+    transition: none;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+/* Cursor styles */
+button,
+a,
+[role="button"] {
+    cursor: pointer;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade in animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Section animations */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Performance & Accessibility Optimizations */
+
+/* Respect user's motion preferences for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+    * {
+        outline-width: 2px;
+    }
+
+    button,
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* WebP image support fallback */
+picture {
+    display: contents;
+}
+
+/* Optimize for Core Web Vitals - LCP (Largest Contentful Paint) */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Font loading optimization */
+@font-face {
+    font-display: swap;
+}
+
+/* Lazy loading support */
+img[loading="lazy"] {
+    background: #f0f0f0;
+}
+
+/* Optimize form inputs */
+input,
+textarea,
+select {
+    font-size: 16px;
+}
+
+/* Touch target size optimization (WCAG 2.5 Level AAA) */
+button,
+a,
+[role="button"],
+input[type="checkbox"],
+input[type="radio"] {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* Link underlines for accessibility */
+a:not([class*="no-underline"]) {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: text-decoration-color 0.2s ease;
+}
+
+a:not([class*="no-underline"]):hover {
+    text-decoration-color: currentColor;
+}
+
+/* Skip to content link for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    padding: 1rem;
+    background: #000;
+    color: #fff;
+    z-index: 9999;
+}
