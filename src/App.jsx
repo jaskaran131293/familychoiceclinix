@@ -91,7 +91,7 @@ function App() {
         className="bg-slate-900 text-white px-4 sm:px-6 lg:px-16 py-2 sm:py-3 flex flex-col sm:flex-row justify-between items-center sm:items-center gap-3 sm:gap-0 text-xs sm:text-sm"
       >
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 w-full sm:w-auto">
-          <span className="truncate">📞 Support: 24/7 Emergency Call</span>
+          <a href="tel:832-577-5875" className="truncate hover:text-brand transition">📞 (832)-577-5875</a>
           <span className="truncate hidden sm:inline">📧 Email Us: hello@familychoice.com</span>
         </div>
         <div className="flex items-center gap-1 sm:gap-1 align-center">
@@ -344,8 +344,10 @@ function App() {
           </div>
           <div>
             <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3">Emergency Contact</h3>
-            <p className="text-gray-600 text-xs sm:text-sm">+1 (212) 555-1212</p>
-            <p className="text-gray-600 text-xs sm:text-sm">+1 (585) 393-2132</p>
+            <p className="text-gray-600 text-xs sm:text-sm">
+              <a href="tel:832-577-5875" className="hover:text-brand transition font-semibold">(832) 577-5875</a>
+            </p>
+            <p className="text-gray-500 text-xs sm:text-sm">24/7 Available</p>
           </div>
         </motion.div>
 
@@ -359,7 +361,7 @@ function App() {
           </div>
           <div>
             <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3">We Are Here</h3>
-            <p className="text-gray-600 text-xs sm:text-sm">Veridian Way, No. 22, Zenith Valley, CA 90210</p>
+            <p className="text-gray-600 text-xs sm:text-sm">10707 Corporate Dr, Stafford, TX 77477</p>
           </div>
         </motion.div>
 
@@ -1481,19 +1483,16 @@ function App() {
               <h4 className="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-white">Business Hours</h4>
               <div className="space-y-3">
                 <div>
-                  <div className="text-xs sm:text-sm font-semibold text-gray-300">Weekdays</div>
+                  <div className="text-xs sm:text-sm font-semibold text-gray-300">Monday - Saturday</div>
                   <div className="text-xs sm:text-sm text-gray-400">8:00 AM - 5:00 PM</div>
-                </div>
-                <div>
-                  <div className="text-xs sm:text-sm font-semibold text-gray-300">Saturday</div>
-                  <div className="text-xs sm:text-sm text-gray-400">8:00 AM - 4:00 PM</div>
+                  <div className="text-xs sm:text-sm text-gray-500">By appointment</div>
                 </div>
                 <div>
                   <div className="text-xs sm:text-sm font-semibold text-gray-300">Sunday</div>
                   <div className="text-xs sm:text-sm text-brand font-semibold">Closed</div>
                 </div>
                 <div className="pt-3 border-t border-gray-700">
-                  <div className="text-xs sm:text-sm text-gray-400">📞 24/7 Emergency Support</div>
+                  <a href="tel:832-577-5875" className="text-xs sm:text-sm text-brand hover:text-brand-dark transition font-semibold">📞 Call: (832) 577-5875</a>
                 </div>
               </div>
             </motion.div>
@@ -1686,8 +1685,8 @@ function App() {
               </div>
               <div>
                 <h4 className="font-bold text-gray-900 mb-1">Address</h4>
-                <p className="text-gray-600 text-sm">123 Medical Center Drive</p>
-                <p className="text-gray-500 text-xs">Baton Rouge, LA 70801</p>
+                <p className="text-gray-600 text-sm">10707 Corporate Dr</p>
+                <p className="text-gray-500 text-xs">Stafford, TX 77477</p>
               </div>
             </motion.div>
 
